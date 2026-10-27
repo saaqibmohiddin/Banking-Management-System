@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FinCore | Banking Management System</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f2f5fa;color:#172b45;font-family:Arial,sans-serif}
+header{background:#102b46;color:white;padding:23px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header h1{margin:0;font-size:25px}
+header p{color:#bdcede;margin-bottom:0}
+.logo{font-size:30px}
+main{max-width:1050px;margin:30px auto;padding:0 16px}
+.panel{background:white;padding:24px;border-radius:15px;margin-bottom:20px;box-shadow:0 5px 22px #142b4510}
+h2{margin-top:0}
+label{display:block;font-size:13px;font-weight:bold;margin:13px 0 7px}
+input{width:100%;padding:13px;border:1px solid #d8e0eb;border-radius:8px;font-size:15px}
+button{border:0;padding:12px 17px;border-radius:8px;cursor:pointer;font-weight:bold}
+.primary{background:#087e8b;color:white}
+.secondary{background:#eaf0f6;color:#263c56}
+.danger{background:#ffe9e9;color:#a33}
+button:disabled{opacity:.6;cursor:not-allowed}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:17px}
+.actions button{flex:1}
+.tabs{display:flex;gap:9px;overflow:auto;margin-bottom:18px}
+.tabs button{white-space:nowrap;background:#eaf0f6;color:#263c56}
+.tabs button.active{background:#087e8b;color:white}
+.balance{background:linear-gradient(120deg,#102b46,#087e8b);color:white;padding:25px;border-radius:14px;margin:18px 0}
+.balance small{color:#d1e5ed}
+.balance h2{font-size:32px;margin:12px 0}
+.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stat{background:#f2f6fa;padding:17px;border-radius:10px}
+.stat strong{display:block;font-size:20px;margin-top:8px;color:#087e8b}
+.message{padding:12px;border-radius:8px;margin-top:12px;font-size:14px;display:none}
+.success{display:block;background:#e5f8ef;color:#17633d}
+.error{display:block;background:#ffeded;color:#a33}
+.muted{color:#77869a;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{text-align:left;padding:12px 8px;border-bottom:1px solid #e9edf3}
+th{color:#63748a}
+.hidden{display:none!important}
+footer{text-align:center;padding:25px;color:#78869a;font-size:12px}
+@media(max-width:650px){
+.grid{grid-template-columns:1fr}
+.statgrid{grid-template-columns:1fr 1fr}
+.panel{padding:17px}
+.balance h2{font-size:27px}
+.tablewrap{overflow-x:auto}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div>
+<h1><span class="logo">🏦</span> FinCore</h1>
+<p>Banking Management System</p>
+</div>
+<span>Secure Banking Demo</span>
+</header>
+
+<main>
+
+<!-- ACCOUNT ACCESS -->
+<section id="authSection">
+
+<div class="panel">
+<h2>Create Your Account</h2>
+<p class="muted">Register a new demonstration bank account.</p>
+
+<label>Account Holder Name</label>
+<input id="newName" placeholder="Enter your full name">
+
+<label>Create 4-digit PIN</label>
+<input id="newPin" type="password" inputmode="numeric" maxlength="4" placeholder="Enter PIN">
+
+<label>Confirm PIN</label>
+<input id="confirmPin" type="password" inputmode="numeric" maxlength="4" placeholder="Confirm PIN">
+
+<label>Initial Deposit (₹)</label>
+<input id="initialDeposit" type="number" min="0" step="0.01" value="0">
+
+<button class="primary" id="createBtn">Create Bank Account</button>
+<div id="createMessage" class="message"></div>
+</div>
+
+<div class="panel">
+<h2>Account Login</h2>
+
+<label>Account Number</label>
+<input id="loginAccount" inputmode="numeric" placeholder="Enter account number">
+
+<label>4-digit PIN</label>
+<input id="loginPin" type="password" inputmode="numeric" maxlength="4" placeholder="Enter PIN">
+
+<button class="primary" id="loginBtn">Login to Account</button>
+<div id="loginMessage" class="message"></div>
+</div>
+
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="hidden">
+
+<div class="panel">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+<div>
+<h2 id="welcome">Welcome!</h2>
+<p class="muted" id="accountInfo"></p>
+</div>
+<button class="danger" id="logoutBtn">Logout</button>
+</div>
+
+<div class="balance">
+<small>Available Account Balance</small>
+<h2 id="balance">₹0.00</h2>
+<small id="accountDisplay"></small>
+</div>
+
+<div class="statgrid">
+<div class="stat"><span class="muted">Total Deposits</span><strong id="totalDeposits">₹0</strong></div>
+<div class="stat"><span class="muted">Total Withdrawals</span><strong id="totalWithdrawals">₹0</strong></div>
+<div class="stat"><span class="muted">Transactions</span><strong id="transactionCount">0</strong></div>
+</div>
+</div>
+
+<div class="panel">
+<div class="tabs">
+<button class="active" data-tab="depositTab">Deposit</button>
+<button data-tab="withdrawTab">Withdraw</button>
+<button data-tab="historyTab">History</button>
+<button data-tab="profileTab">Account Details</button>
+</div>
+
+<!-- DEPOSIT -->
+<div id="depositTab" class="tabContent">
+<h2>Deposit Money</h2>
+<p class="muted">Add money to your demonstration account.</p>
+<label>Deposit Amount (₹)</label>
+<input id="depositAmount" type="number" min="0.01" step="0.01" placeholder="Enter amount">
+<button class="primary" id="depositBtn">Deposit Money</button>
+<div id="depositMessage" class="message"></div>
+</div>
+
+<!-- WITHDRAW -->
+<div id="withdrawTab" class="tabContent hidden">
+<h2>Withdraw Money</h2>
+<p class="muted">Withdraw money from your demonstration account.</p>
+<label>Withdrawal Amount (₹)</label>
+<input id="withdrawAmount" type="number" min="0.01" step="0.01" placeholder="Enter amount">
+<button class="primary" id="withdrawBtn">Withdraw Money</button>
+<div id="withdrawMessage" class="message"></div>
+</div>
+
+<!-- HISTORY -->
+<div id="historyTab" class="tabContent hidden">
+<h2>Transaction History</h2>
+<div class="tablewrap">
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Balance</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody id="historyRows"></tbody>
+</table>
+</div>
+<p id="emptyHistory" class="muted">No transactions found.</p>
+<button class="secondary" id="downloadHistory">Download History</button>
+</div>
+
+<!-- PROFILE -->
+<div id="profileTab" class="tabContent hidden">
+<h2>Account Details</h2>
+<p><strong>Account Holder:</strong> <span id="profileName"></span></p>
+<p><strong>Account Number:</strong> <span id="profileNumber"></span></p>
+<p><strong>Account Created:</strong> <span id="profileDate"></span></p>
+<p class="muted">Educational demonstration account. No real banking services are provided.</p>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+FinCore Banking Management System | Educational Project Demonstration
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const STORAGE_KEY="fincore_demo_accounts";
+let accounts={};
+let currentAccount=null;
+
+try{
+accounts=JSON.parse(localStorage.getItem(STORAGE_KEY)||"{}");
+if(!accounts||typeof accounts!=="object"||Array.isArray(accounts))accounts={};
+}catch(e){accounts={};}
+
+function save(){
+localStorage.setItem(STORAGE_KEY,JSON.stringify(accounts));
+}
+
+function money(paise){
+return "₹"+(paise/100).toLocaleString("en-IN",{
+minimumFractionDigits:2,
+maximumFractionDigits:2
+});
+}
+
+function amountToPaise(value){
+const amount=Number(value);
+if(!Number.isFinite(amount)||amount<=0||!Number.isSafeInteger(Math.round(amount*100))||Math.abs(amount*100-Math.round(amount*100))>0.00001){
+throw new Error("Enter a valid amount with up to 2 decimal places.");
+}
+return Math.round(amount*100);
+}
+
+function showMessage(id,message,type){
+const el=$(id);
+el.textContent=message;
+el.className="message "+type;
+}
+
+function makeAccountNumber(){
+let number;
+do{
+number=String(100001+Math.floor(Math.random()*899998));
+}while(accounts[number]);
+return number;
+}
+
+function hashPin(pin){
+return crypto.subtle.digest("SHA-256",new TextEncoder().encode(pin))
+.then(buffer=>Array.from(new Uint8Array(buffer))
+.map(x=>x.toString(16).padStart(2,"0")).join(""));
+}
+
+function validPin(pin){
+return /^\d{4}$/.test(pin);
+}
+
+$("createBtn").onclick=async()=>{
+const name=$("newName").value.trim();
+const pin=$("newPin").value;
+const confirm=$("confirmPin").value;
+
+if(!name){
+showMessage("createMessage","Enter your account holder name.","error");
+return;
+}
+if(!validPin(pin)){
+showMessage("createMessage","PIN must contain exactly 4 digits.","error");
+return;
+}
+if(pin!==confirm){
+showMessage("createMessage","PINs do not match.","error");
+return;
+}
+
+let balance;
+try{
+const value=Number($("initialDeposit").value);
+if(!Number.isFinite(value)||value<0||Math.round(value*100)!==value*100){
+throw new Error();
+}
+balance=Math.round(value*100);
+}catch(e){
+showMessage("createMessage","Enter a valid initial deposit.","error");
+return;
+}
+
+try{
+const accountNumber=makeAccountNumber();
+const pinHash=await hashPin(pin);
+
+accounts[accountNumber]={
+number:accountNumber,
+name:name,
+pinHash:pinHash,
+balance:balance,
+created:new Date().toLocaleString(),
+transactions:[]
+};
+
+if(balance>0){
+accounts[accountNumber].transactions.push({
+id:1,type:"Initial Deposit",amount:balance,
+balance:balance,date:new Date().toLocaleString()
+});
+}
+
+save();
+$("loginAccount").value=accountNumber;
+$("newName").value="";
+$("newPin").value="";
+$("confirmPin").value="";
+$("initialDeposit").value="0";
+
+showMessage("createMessage",
+"Account created! Your account number is "+accountNumber+". Save it for login.","success");
+}catch(e){
+showMessage("createMessage","Could not create account. Try again.","error");
+}
+};
+
+$("loginBtn").onclick=async()=>{
+const number=$("loginAccount").value.trim();
+const pin=$("loginPin").value;
+
+if(!/^\d+$/.test(number)||!validPin(pin)){
+showMessage("loginMessage","Enter a valid account number and 4-digit PIN.","error");
+return;
+}
+
+const account=accounts[number];
+if(!account){
+showMessage("loginMessage","Account not found.","error");
+return;
+}
+
+const pinHash=await hashPin(pin);
+if(pinHash!==account.pinHash){
+showMessage("loginMessage","Incorrect account number or PIN.","error");
+return;
+}
+
+currentAccount=number;
+$("loginPin").value="";
+$("authSection").classList.add("hidden");
+$("dashboard").classList.remove("hidden");
+renderDashboard();
+};
+
+function renderDashboard(){
+const account=accounts[currentAccount];
+if(!account)return;
+
+$("welcome").textContent="Welcome, "+account.name;
+$("accountInfo").textContent="Your banking dashboard";
+$("accountDisplay").textContent="Account Number: "+account.number;
+$("balance").textContent=money(account.balance);
+$("profileName").textContent=account.name;
+$("profileNumber").textContent=account.number;
+$("profileDate").textContent=account.created;
+
+let deposits=0,withdrawals=0;
+account.transactions.forEach(t=>{
+if(t.type==="Deposit"||t.type==="Initial Deposit")deposits+=t.amount;
+if(t.type==="Withdrawal")withdrawals+=t.amount;
+});
+
+$("totalDeposits").textContent=money(deposits);
+$("totalWithdrawals").textContent=money(withdrawals);
+$("transactionCount").textContent=account.transactions.length;
+
+const rows=$("historyRows");
+rows.innerHTML="";
+
+[...account.transactions].reverse().forEach(t=>{
+const tr=document.createElement("tr");
+[t.id,t.type,money(t.amount),money(t.balance),t.date].forEach(value=>{
+const td=document.createElement("td");
+td.textContent=value;
+tr.appendChild(td);
+});
+rows.appendChild(tr);
+});
+
+$("emptyHistory").classList.toggle("hidden",account.transactions.length>0);
+}
+
+function recordTransaction(type,amount){
+const account=accounts[currentAccount];
+account.transactions.push({
+id:account.transactions.length+1,
+type:type,
+amount:amount,
+balance:account.balance,
+date:new Date().toLocaleString()
+});
+save();
+renderDashboard();
+}
+
+$("depositBtn").onclick=()=>{
+try{
+const amount=amountToPaise($("depositAmount").value);
+const account=accounts[currentAccount];
+account.balance+=amount;
+recordTransaction("Deposit",amount);
+$("depositAmount").value="";
+showMessage("depositMessage","Deposit of "+money(amount)+" successful.","success");
+}catch(e){
+showMessage("depositMessage",e.message,"error");
+}
+};
+
+$("withdrawBtn").onclick=()=>{
+try{
+const amount=amountToPaise($("withdrawAmount").value);
+const account=accounts[currentAccount];
+
+if(amount>account.balance){
+showMessage("withdrawMessage","Insufficient balance.","error");
+return;
+}
+
+account.balance-=amount;
+recordTransaction("Withdrawal",amount);
+$("withdrawAmount").value="";
+showMessage("withdrawMessage","Withdrawal of "+money(amount)+" successful.","success");
+}catch(e){
+showMessage("withdrawMessage",e.message,"error");
+}
+};
+
+document.querySelector(".tabs").onclick=e=>{
+const button=e.target.closest("button[data-tab]");
+if(!button)return;
+
+document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
+button.classList.add("active");
+
+document.querySelectorAll(".tabContent").forEach(tab=>tab.classList.add("hidden"));
+$(button.dataset.tab).classList.remove("hidden");
+};
+
+$("downloadHistory").onclick=()=>{
+const account=accounts[currentAccount];
+if(!account.transactions.length){
+alert("No transactions to download.");
+return;
+}
+
+const lines=[
+["ID","Type","Amount","Balance After","Date"],
+...account.transactions.map(t=>[
+t.id,t.type,money(t.amount),money(t.balance),t.date
+])
+];
+
+const csv=lines.map(row=>row.map(value=>
+'"'+String(value).replace(/"/g,'""')+'"'
+).join(",")).join("\n");
+
+const blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+const url=URL.createObjectURL(blob);
+const a=document.createElement("a");
+a.href=url;
+a.download="FinCore-Transaction-History.csv";
+a.click();
+URL.revokeObjectURL(url);
+};
+
+$("logoutBtn").onclick=()=>{
+currentAccount=null;
+$("dashboard").classList.add("hidden");
+$("authSection").classList.remove("hidden");
+document.querySelectorAll(".tabs button").forEach(b=>b.classList.remove("active"));
+document.querySelector('[data-tab="depositTab"]').classList.add("active");
+document.querySelectorAll(".tabContent").forEach(t=>t.classList.add("hidden"));
+$("depositTab").classList.remove("hidden");
+};
+</script>
+
+</body>
+</html>
