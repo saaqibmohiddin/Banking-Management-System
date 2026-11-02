@@ -61,12 +61,10 @@ Architecture Workflow
                        SQLITE DATABASE
 
 
-🏗️ Project Structure – Architecture Diagram
+🏗️ Project Structure – Architecture Diagram 
 
-```mermaid
-%%{init:{'theme':'dark','themeVariables': {'primaryColor':'#172C49','primaryTextColor':'#FFFFFF','primaryBorderColor':'#D6AD55','lineColor':'#D6AD55','secondaryColor':'#101D30','tertiaryColor':'#071426'}}}%%
 flowchart TD
-    A["🏦 BANKING SYSTEM"] --> B["📂 BankingSystem/"]
+    A["🏦 BANKING SYSTEM"] --> B["📁 BankingSystem"]
 
     B --> C["📁 screenshots/"]
     B --> D["🐍 banking_system.py"]
