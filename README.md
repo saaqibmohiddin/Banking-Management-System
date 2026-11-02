@@ -3,7 +3,7 @@
 
 ---
 
-
+## ABOUT THE PROJECT
 
 The Banking Management System is a console-based banking application developed using Python and SQLite. It provides essential banking operations through a simple and user-friendly interface while maintaining account information and transaction records in a local database.
 
@@ -23,12 +23,12 @@ It uses PIN hashing, input validation, database error handling, and transaction 
 - ⚙️ Database error handling and transaction rollback
 - 🇮🇳 Indian Rupee (INR) currency formatting
 
-🎯 Project Objective
+## 🎯 PROJECT OBJECTIVE
 
 To develop a simple and reliable banking application that demonstrates core banking operations, database management, authentication, and secure transaction handling using Python.
 
 
-🏗️ SYSTEM ARCHITECTURE
+## 🏗️ SYSTEM ARCHITECTURE
 
 The Banking Management System follows a simple application architecture in which the user interacts with the Python application, which processes banking operations and communicates with the SQLite database.
 
