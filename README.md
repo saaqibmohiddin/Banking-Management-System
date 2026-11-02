@@ -60,3 +60,19 @@ Architecture Workflow
                              ▼
                        SQLITE DATABASE
 
+
+## 📂 Project Structure
+
+🏦 BankingSystem/
+├── 📁 screenshots/
+│   ├── main_menu.png
+│   ├── deposit.png
+│   └── transaction_history.png
+├── 🐍 banking_system.py
+├── 🗄️ database.py
+├── 📄 README.md
+├── ⚙️ .gitignore
+└── 💾 bank.db
+
+🏷️ BANKING & FINANCE  |  ACCOUNT SECURITY
+
