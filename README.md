@@ -1,125 +1,58 @@
-🏦 BANKING MANAGEMENT SYSTEM
+🏦 Banking Management System
 
-<div align="center">💳 BANKING MANAGEMENT SYSTEM
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=waving&color=0:071426,50:172C49,100:D6AD55&height=180&section=header&text=BANKING%20MANAGEMENT%20SYSTEM&fontSize=27&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Secure%20Banking%20%7C%20Smart%20Transactions&descAlignY=60&descSize=15" width="100%"/>A Python-based banking application for secure account management and financial transactions.
 
-<span style="color:#D6AD55">Secure Banking. Smart Transactions.</span>
-
-A Python-powered Banking Management System designed to manage accounts, process financial transactions, and maintain secure banking records.
-
-""Python" (https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)" (https://python.org)
-""SQLite" (https://img.shields.io/badge/SQLite-Database-003B57?style=for-the-badge&logo=sqlite&logoColor=white)" (https://sqlite.org)
-"SQL" (https://img.shields.io/badge/SQL-Database%20Management-D6AD55?style=for-the-badge)
-""Git" (https://img.shields.io/badge/Git-Version%20Control-F05032?style=for-the-badge&logo=git&logoColor=white)" (https://git-scm.com)
-""GitHub" (https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github)" (https://github.com)
-
----
-
-🏦 ACCOUNT MANAGEMENT  |  🔐 SECURE AUTHENTICATION  |  💰 FINANCIAL TRANSACTIONS
+"Python" (https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+"SQLite" (https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+"SQL" (https://img.shields.io/badge/SQL-D6AD55?style=for-the-badge)
+"Git" (https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 
 </div>---
 
-📖 ABOUT THE PROJECT
+📖 About
 
-«A simple, secure and database-driven banking application built with Python and SQLite.»
+A console-based Banking Management System developed using Python and SQLite. It provides account creation, PIN authentication, deposits, withdrawals, balance checking, and transaction history.
 
-The Banking Management System is a console-based banking application developed using Python and SQLite.
+✨ Features
 
-The application provides essential banking functionalities such as account creation, secure PIN authentication, deposits, withdrawals, balance inquiries, and transaction history.
+- 🏦 Create Bank Accounts
+- 🔐 Secure PIN Hashing
+- 🔑 Account Authentication
+- 💰 Deposit Money
+- 💸 Withdraw Money
+- 📊 Check Account Balance
+- 📜 Transaction History
+- 🕒 Automatic Timestamps
+- 🛡️ Input Validation
+- ⚠️ Insufficient Balance Checking
+- 🔄 Database Transaction Rollback
+- 🇮🇳 Indian Rupee Formatting
 
-It uses a relational database to store account information and transaction records while implementing input validation, database error handling, and transaction rollback.
+🛠️ Technologies Used
 
-This project demonstrates practical knowledge of Python programming, database management, authentication, financial calculations, and software development.
+Technology| Purpose
+Python 3| Application Development
+SQLite| Database Management
+SQL| Database Queries
+Git & GitHub| Version Control
 
----
+Python Modules: "sqlite3", "hashlib", "decimal", "getpass", "pathlib"
 
-✨ KEY FEATURES
+📂 Project Structure
 
-Banking Feature| Description
-🏦 Account Creation| Create new bank accounts
-🔐 Secure PIN Hashing| Store hashed PINs instead of plain-text PINs
-🔑 Account Authentication| Authenticate users using account credentials
-💰 Money Deposit| Deposit money into bank accounts
-💸 Money Withdrawal| Withdraw money from available balance
-📊 Balance Inquiry| Check the current account balance
-📜 Transaction History| View previous banking transactions
-🕒 Automatic Timestamps| Record transaction dates and times
-🛡️ Input Validation| Validate user inputs and transaction amounts
-⚠️ Insufficient Balance Check| Prevent withdrawals exceeding available balance
-🗄️ SQLite Database| Store banking information using SQLite
-🔄 Transaction Rollback| Maintain database consistency when operations fail
-🇮🇳 INR Currency Formatting| Display amounts in Indian Rupees
-⚙️ Database Error Handling| Handle database-related exceptions
-
----
-
-🛠️ TECHNOLOGIES USED
-
-💻 Programming Languages
-
-"Python" (https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-"SQL" (https://img.shields.io/badge/SQL-D6AD55?style=flat-square)
-
-- Python 3
-- SQL
-
-🗄️ Database Technology
-
-"SQLite" (https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
-
-- SQLite
-
-🐍 Python Modules
-
-Module| Purpose
-"sqlite3"| Database connectivity and operations
-"hashlib"| PIN hashing
-"decimal"| Accurate financial calculations
-"getpass"| Hidden PIN input in supported terminals
-"pathlib"| File and directory management
-
-⚙️ Development Tools
-
-"VS Code" (https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-"Git" (https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-"GitHub" (https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-
-- Visual Studio Code
-- Git
-- GitHub
-
----
-
-📂 PROJECT STRUCTURE
-
-🏦 BankingSystem/
+BankingSystem/
 │
-├── 📁 screenshots/
-│   ├── 🖼️ main_menu.png
-│   ├── 🖼️ deposit.png
-│   └── 🖼️ transaction_history.png
+├── screenshots/
+│   ├── main_menu.png
+│   ├── deposit.png
+│   └── transaction_history.png
 │
-├── 🐍 banking_system.py
-│
-├── 🗄️ database.py
-│
-├── 📄 README.md
-│
-├── ⚙️ .gitignore
-│
-└── 🗃️ bank.db
+├── banking_system.py
+├── database.py
+├── README.md
+├── .gitignore
+└── bank.db
 
-📁 Folder & File Description
-
-File / Folder| Description
-"screenshots/"| Stores application screenshots
-"main_menu.png"| Main banking menu preview
-"deposit.png"| Deposit operation preview
-"transaction_history.png"| Transaction history preview
-"banking_system.py"| Main application and banking operations
-"database.py"| Database connection and database operations
-"README.md"| Project documentation
-".gitignore"| Files excluded from Git tracking
-"bank.db"| SQLite database file generated by the application
 
 ---
 
@@ -156,193 +89,3 @@ Architecture Workflow
                              ▼
                        SQLITE DATABASE
 
-GitHub Architecture Diagram
-
-flowchart TD
-    A["👤 User"] --> B["Main Menu"]
-    B --> C["Create Account"]
-    B --> D["Account Login"]
-
-    C --> E["PIN Hashing"]
-    E --> F["Database Operations"]
-
-    D --> G["Authentication"]
-    G --> H["Banking Operations"]
-
-    H --> I["Deposit"]
-    H --> J["Withdraw"]
-    H --> K["Balance Inquiry"]
-    H --> L["Transaction History"]
-
-    I --> M["Database Layer"]
-    J --> M
-    K --> M
-    L --> M
-    F --> M
-
-    M --> N[("SQLite Database")]
-    N --> O["Account & Transaction Records"]
-
-    style A fill:#172C49,color:#fff
-    style B fill:#24456B,color:#fff
-    style E fill:#604A19,color:#fff
-    style G fill:#604A19,color:#fff
-    style H fill:#203C36,color:#fff
-    style M fill:#604A19,color:#fff
-    style N fill:#172C49,color:#fff
-
-⚙️ Component Responsibilities
-
-Component| Responsibility
-User Interface| Displays the banking menu and accepts user inputs
-Account Creation| Registers new bank accounts
-PIN Hashing| Hashes customer PINs before storage
-Authentication| Verifies customer login credentials
-Deposit Module| Processes deposit transactions
-Withdrawal Module| Processes withdrawals after balance validation
-Balance Module| Retrieves and displays account balances
-Transaction History| Retrieves transaction records
-Database Layer| Handles SQLite database operations
-Error Handling| Handles application and database errors
-
-The component responsibilities describe the logical workflow based on the available project files.
-
-💳 Banking Operations
-
-1. Create New Account
-
-- Enter customer information.
-- Set a secure PIN.
-- Confirm the PIN.
-- Store account information in the database.
-
-2. Account Authentication
-
-- Enter account credentials.
-- Verify the PIN.
-- Allow access to banking operations after successful authentication.
-
-3. Deposit Money
-
-- Enter the deposit amount.
-- Validate the amount.
-- Update the account balance.
-- Record the transaction.
-
-4. Withdraw Money
-
-- Enter the withdrawal amount.
-- Check the available balance.
-- Prevent insufficient-balance withdrawals.
-- Update the account balance.
-- Record the transaction.
-
-5. Check Account Balance
-
-- Retrieve the current account balance.
-- Display the amount in Indian Rupees.
-
-6. View Transaction History
-
-- Retrieve previous transactions.
-- Display deposits and withdrawals.
-- Show transaction timestamps.
-
-🖥️ Application Screenshots
-
-The following screenshots demonstrate the application's functionality.
-
-<div align="center">Main Menu
-
-"Main Menu" (screenshots/main_menu.png)
-
-Deposit Operation
-
-"Deposit" (screenshots/deposit.png)
-
-Transaction History
-
-"Transaction History" (screenshots/transaction_history.png)
-
-</div>🚀 Installation & Setup
-
-Prerequisites
-
-- Python 3 installed.
-- Visual Studio Code or another Python editor.
-- Git installed (optional, for cloning).
-
-Step 1: Clone Repository
-
-git clone YOUR_GITHUB_REPOSITORY_URL
-
-Step 2: Navigate to Project
-
-cd BankingSystem
-
-Step 3: Run Application
-
-python banking_system.py
-
-SQLite and the required Python modules are available through Python's standard library in typical installations. No additional package installation is required if the project uses only the listed standard-library modules.
-
-🔐 Security & Data Integrity
-
-The application demonstrates several security and data-integrity practices:
-
-- PIN hashing instead of plain-text PIN storage.
-- Account authentication.
-- Input validation.
-- Accurate monetary calculations using Decimal.
-- Database exception handling.
-- Transaction rollback for failed database operations.
-- SQLite relational data storage.
-
-Security Note: Hashing with a plain SHA-256 digest is not sufficient for production PIN storage. Real banking applications should use a suitable salted password-hashing scheme, strict access controls, encryption, rate limiting, audit logging, and additional security protections.
-
-🎯 Learning Outcomes
-
-Through this project, I gained practical experience in:
-
-- Python application development.
-- SQLite database connectivity.
-- Relational database management.
-- SQL queries and data manipulation.
-- Secure credential handling.
-- Financial transaction processing.
-- Exception handling.
-- Data validation.
-- Database transaction management.
-- Git and GitHub version control.
-
-🔮 Future Enhancements
-
-- 🖥️ Graphical User Interface using Tkinter.
-- 📄 PDF bank statements.
-- 👨‍💼 Admin dashboard.
-- 🔁 Account-to-account money transfers.
-- 📱 Web-based banking interface.
-- 🔐 OTP-based authentication.
-- 📊 Monthly transaction reports.
-- 💾 Automated database backup.
-- 🔒 Improved authentication and security.
-
-👨‍💻 Developer
-
-Mohammed Saaqib Mohiddin
-
-Computer Science & Engineering – Artificial Intelligence
-
-""GitHub" (https://img.shields.io/badge/GitHub-Visit%20Profile-181717?style=for-the-badge&logo=github)" (https://github.com/saaqibmohiddin)
-
----
-
-<div align="center">🏦 BANKING MANAGEMENT SYSTEM
-
-Secure Banking. Smart Transactions.
-
-Built with  using Python and SQLite.
-
-⭐ If you find this project useful, consider giving it a star!
-
-</div>
