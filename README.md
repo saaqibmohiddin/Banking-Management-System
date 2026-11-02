@@ -39,7 +39,6 @@ Git & GitHub| Version Control
 Python Modules: "sqlite3", "hashlib", "decimal", "getpass", "pathlib"
 
 
-🏦 Project Structure
 
 <div align="center">💳 BANKING SYSTEM — FILE ARCHITECTURE
 
