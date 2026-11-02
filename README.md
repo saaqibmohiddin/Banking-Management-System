@@ -1,22 +1,22 @@
 🏦 Project Structure
 
-<div align="center">"Navy" (https://img.shields.io/badge/THEME-DARK%20NAVY-071426?style=for-the-badge)
-"Gold" (https://img.shields.io/badge/DESIGN-LUXURY%20GOLD-D6AD55?style=for-the-badge)
+<div align="center"><img src="https://img.shields.io/badge/BANKING_SYSTEM-PROJECT_ARCHITECTURE-071426?style=for-the-badge&labelColor=071426&color=D6AD55"/><img src="https://img.shields.io/badge/DARK_NAVY-071426?style=flat-square"/> <img src="https://img.shields.io/badge/LUXURY_GOLD-D6AD55?style=flat-square"/>
 
-💳 BANKING SYSTEM — FILE ARCHITECTURE
-
-</div>🏦 BankingSystem/
+</div>🏦 BankingSystem
 │
 ├── 📁 screenshots/
+│
 ├── 🐍 banking_system.py
+│
 ├── 🗄️ database.py
+│
 ├── 📄 README.md
+│
 ├── ⚙️ .gitignore
+│
 └── 💾 bank.db
 
-<div align="center">SECURE BANKING • SMART TRANSACTIONS
-
-</div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,100:D6AD55&height=55&section=footer&text=SECURE%20BANKING%20%7C%20SMART%20TRANSACTIONS&fontSize=15&fontColor=FFFFFF"/></div>
 
 ---
 
