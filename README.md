@@ -251,7 +251,7 @@ To demonstrate how fundamental banking operations can be managed through a simpl
 
 ---
 
-## 👨‍💻 Developer
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/DEVELOPED%20BY-071426?style=for-the-badge&logoColor=D6AD55" />
