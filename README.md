@@ -61,18 +61,45 @@ Architecture Workflow
                        SQLITE DATABASE
 
 
-## 📂 Project Structure
+🏗️ Project Structure – Architecture Diagram
 
-🏦 BankingSystem/
-├── 📁 screenshots/
-│   ├── main_menu.png
-│   ├── deposit.png
-│   └── transaction_history.png
-├── 🐍 banking_system.py
-├── 🗄️ database.py
-├── 📄 README.md
-├── ⚙️ .gitignore
-└── 💾 bank.db
 
-🏷️ BANKING & FINANCE  |  ACCOUNT SECURITY
+```mermaid
+%%{init:{'theme':'dark','themeVariables': {'primaryColor':'#172C49','primaryTextColor':'#FFFFFF','primaryBorderColor':'#D6AD55','lineColor':'#D6AD55','secondaryColor':'#101D30','tertiaryColor':'#071426'}}}%%
+flowchart TD
+    A["🏦 BANKING SYSTEM"] --> B["📂 BankingSystem/"]
+
+    B --> C["📁 screenshots/"]
+    B --> D["🐍 banking_system.py"]
+    B --> E["🗄️ database.py"]
+    B --> F["📄 README.md"]
+    B --> G["⚙️ .gitignore"]
+    B --> H["💾 bank.db"]
+
+    C --> I["main_menu.png"]
+    C --> J["deposit.png"]
+    C --> K["transaction_history.png"]
+
+    D --> L["Banking Operations"]
+    E --> M["Database Management"]
+    H --> N["Account & Transaction Storage"]
+
+    classDef main fill:#071426,stroke:#D6AD55,color:#FFFFFF,stroke-width:3px
+    classDef folder fill:#172C49,stroke:#D6AD55,color:#FFFFFF,stroke-width:2px
+    classDef files fill:#101D30,stroke:#8298B5,color:#FFFFFF
+    classDef data fill:#243B53,stroke:#D6AD55,color:#FFFFFF
+
+    class A,B main
+    class C folder
+    class D,E,F,G,H,I,J,K files
+    class L,M,N data
+```
+
+<div align="center">
+
+🏦 **BANKING & FINANCE** | 🔐 **ACCOUNT SECURITY**
+
+</div>
+
+
 
