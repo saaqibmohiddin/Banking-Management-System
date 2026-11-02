@@ -61,10 +61,16 @@ Architecture Workflow
                        SQLITE DATABASE
 
 
-🏗️ Project Structure – Architecture Diagram 
+## 🏗️ Project Structure – Architecture Diagram
 
+<p align="center">
+  <img src="https://img.shields.io/badge/BANKING%20%26%20FINANCE-071426?style=for-the-badge&logo=bank&logoColor=D6AD55" />
+  <img src="https://img.shields.io/badge/ACCOUNT%20SECURITY-172C49?style=for-the-badge&logo=shield&logoColor=D6AD55" />
+</p>
+
+```mermaid
 flowchart TD
-    A["🏦 BANKING SYSTEM"] --> B["📁 BankingSystem"]
+    A["🏦 BANKING SYSTEM"] --> B["📁 BankingSystem/"]
 
     B --> C["📁 screenshots/"]
     B --> D["🐍 banking_system.py"]
@@ -83,20 +89,17 @@ flowchart TD
 
     classDef main fill:#071426,stroke:#D6AD55,color:#FFFFFF,stroke-width:3px
     classDef folder fill:#172C49,stroke:#D6AD55,color:#FFFFFF,stroke-width:2px
-    classDef files fill:#101D30,stroke:#8298B5,color:#FFFFFF
-    classDef data fill:#243B53,stroke:#D6AD55,color:#FFFFFF
+    classDef files fill:#101D30,stroke:#8298B5,color:#FFFFFF,stroke-width:1.5px
+    classDef data fill:#243B53,stroke:#D6AD55,color:#FFFFFF,stroke-width:2px
 
     class A,B main
     class C folder
-    class D,E,F,G,H,I,J,K files
-    class L,M,N data
+    class D,E,F,G,I,J,K files
+    class H,L,M,N data
 ```
 
-<div align="center">
-
-🏦 **BANKING & FINANCE** | 🔐 **ACCOUNT SECURITY**
-
-</div>
-
+<p align="center">
+  <b>🏦 BANKING & FINANCE</b> &nbsp; | &nbsp; <b>🔐 ACCOUNT SECURITY</b>
+</p>
 
 
