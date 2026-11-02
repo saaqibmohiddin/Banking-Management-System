@@ -1,21 +1,31 @@
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,50:172C49,100:D6AD55&height=90&text=BANKING%20SYSTEM&fontSize=28&fontColor=FFFFFF&desc=PROJECT%20ARCHITECTURE&descSize=13&descAlignY=72"/><img src="https://img.shields.io/badge/BANKING%20%26%20FINANCE-172C49?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/ACCOUNT%20SECURITY-D6AD55?style=for-the-badge"/></div>🏦 BankingSystem/
-│
-├── 📁 screenshots/
-│
-├── 🐍 banking_system.py
-│
-├── 🗄️ database.py
-│
-├── 📄 README.md
-│
-├── ⚙️ .gitignore
-│
-└── 💾 bank.db
-
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,100:D6AD55&height=55&text=SECURE%20BANKING%20%7C%20SMART%20TRANSACTIONS&fontSize=14&fontColor=FFFFFF"/></div>
+<img src="https://img.shields.io/badge/ACCOUNT%20SECURITY-D6AD55?style=for-the-badge"/></div>
 
 ---
+
+🏦 About Banking Management System
+
+The Banking Management System is a console-based banking application developed using Python and SQLite. It provides essential banking operations through a simple and user-friendly interface while maintaining account information and transaction records in a local database.
+
+The application allows users to create bank accounts, securely authenticate using PIN verification, deposit and withdraw money, check account balances, and view transaction history.
+
+It uses PIN hashing, input validation, database error handling, and transaction rollback to improve account security and data reliability.
+
+✨ Key Highlights
+
+- 🏦 Bank account creation and management
+- 🔐 Secure PIN hashing and authentication
+- 💰 Deposit and withdrawal operations
+- 📊 Real-time balance inquiry
+- 📜 Transaction history with automatic timestamps
+- 🛡️ Input validation and insufficient balance checks
+- 🗄️ SQLite database storage
+- ⚙️ Database error handling and transaction rollback
+- 🇮🇳 Indian Rupee (INR) currency formatting
+
+🎯 Project Objective
+
+To develop a simple and reliable banking application that demonstrates core banking operations, database management, authentication, and secure transaction handling using Python.
 
 
 🏗️ SYSTEM ARCHITECTURE
