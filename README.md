@@ -3,7 +3,7 @@
 
 ---
 
-🏦 About Banking Management System
+
 
 The Banking Management System is a console-based banking application developed using Python and SQLite. It provides essential banking operations through a simple and user-friendly interface while maintaining account information and transaction records in a local database.
 
