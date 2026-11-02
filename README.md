@@ -248,3 +248,46 @@ To demonstrate how fundamental banking operations can be managed through a simpl
 **🏦 Secure Banking • 💰 Reliable Transactions • 🔐 Account Protection**
 
 </p>
+
+---
+
+## 👨‍💻 Developer
+
+<p align="center">
+  <img src="https://img.shields.io/badge/DEVELOPED%20BY-071426?style=for-the-badge&logoColor=D6AD55" />
+  <img src="https://img.shields.io/badge/PYTHON%20DEVELOPER-172C49?style=for-the-badge&logo=python&logoColor=FFD43B" />
+</p>
+
+<h2 align="center">MOHAMMED SAAQIB MOHIDDIN</h2>
+
+<p align="center">
+  <b>Computer Science & Engineering | Artificial Intelligence</b>
+</p>
+
+<p align="center">
+  Passionate about Python, Artificial Intelligence, Machine Learning,
+  and building practical software applications.
+</p>
+
+<p align="center">
+  <a href="https://github.com/saaqibmohiddin">
+    <img src="https://img.shields.io/badge/GitHub-071426?style=for-the-badge&logo=github&logoColor=D6AD55" />
+  </a>
+  <a href="https://github.com/saaqibmohiddin?tab=repositories">
+    <img src="https://img.shields.io/badge/MY%20PROJECTS-172C49?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PROJECT-BANKING%20MANAGEMENT-D6AD55?style=flat-square" />
+  <img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-071426?style=flat-square" />
+  <img src="https://img.shields.io/badge/DATABASE-SQLITE-172C49?style=flat-square" />
+</p>
+
+---
+
+<p align="center">
+  <b>🏦 Designed & Developed with Python</b>
+  <br/>
+  <sub>Secure Banking • Reliable Transactions • Continuous Learning</sub>
+</p>
