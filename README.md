@@ -39,30 +39,30 @@ Git & GitHub| Version Control
 Python Modules: "sqlite3", "hashlib", "decimal", "getpass", "pathlib"
 
 
-📂 Project Structure
+🏦 Project Structure
 
-🏦 BankingSystem/
+<div align="center">💳 BANKING SYSTEM — FILE ARCHITECTURE
+
+"Navy" (https://img.shields.io/badge/THEME-DARK%20NAVY-071426?style=for-the-badge)
+"Gold" (https://img.shields.io/badge/DESIGN-LUXURY%20GOLD-D6AD55?style=for-the-badge)
+
+</div>🏦 BankingSystem/
 │
 ├── 📁 screenshots/
-│   ├── 🖼️ main_menu.png
-│   ├── 🖼️ deposit.png
-│   └── 🖼️ transaction_history.png
 │
 ├── 🐍 banking_system.py
+│
 ├── 🗄️ database.py
+│
 ├── 📄 README.md
+│
 ├── ⚙️ .gitignore
+│
 └── 💾 bank.db
 
-📁 File Description
+<div align="center">DARK NAVY "#071426"  •  LUXURY GOLD "#D6AD55"
 
-File| Purpose
-🐍 "banking_system.py"| Main banking application
-🗄️ "database.py"| Database operations
-📁 "screenshots/"| Application previews
-💾 "bank.db"| SQLite database
-📄 "README.md"| Project documentation
-⚙️ ".gitignore"| Git ignored files
+</div>
 
 ---
 
