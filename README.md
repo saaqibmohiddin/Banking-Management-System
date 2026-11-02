@@ -61,45 +61,36 @@ Architecture Workflow
                        SQLITE DATABASE
 
 
-## 🏗️ Project Structure – Architecture Diagram
+## 🏗️ Project Structure – Architecture
 
 <p align="center">
-  <img src="https://img.shields.io/badge/BANKING%20%26%20FINANCE-071426?style=for-the-badge&logo=bank&logoColor=D6AD55" />
-  <img src="https://img.shields.io/badge/ACCOUNT%20SECURITY-172C49?style=for-the-badge&logo=shield&logoColor=D6AD55" />
+  <img src="https://img.shields.io/badge/BANKING%20%26%20FINANCE-071426?style=for-the-badge&logoColor=D6AD55" />
+  <img src="https://img.shields.io/badge/ACCOUNT%20SECURITY-172C49?style=for-the-badge&logoColor=D6AD55" />
 </p>
 
-```mermaid
-flowchart TD
-    A["🏦 BANKING SYSTEM"] --> B["📁 BankingSystem/"]
+### 📂 Project Folder Structure
 
-    B --> C["📁 screenshots/"]
-    B --> D["🐍 banking_system.py"]
-    B --> E["🗄️ database.py"]
-    B --> F["📄 README.md"]
-    B --> G["⚙️ .gitignore"]
-    B --> H["💾 bank.db"]
-
-    C --> I["main_menu.png"]
-    C --> J["deposit.png"]
-    C --> K["transaction_history.png"]
-
-    D --> L["Banking Operations"]
-    E --> M["Database Management"]
-    H --> N["Account & Transaction Storage"]
-
-    classDef main fill:#071426,stroke:#D6AD55,color:#FFFFFF,stroke-width:3px
-    classDef folder fill:#172C49,stroke:#D6AD55,color:#FFFFFF,stroke-width:2px
-    classDef files fill:#101D30,stroke:#8298B5,color:#FFFFFF,stroke-width:1.5px
-    classDef data fill:#243B53,stroke:#D6AD55,color:#FFFFFF,stroke-width:2px
-
-    class A,B main
-    class C folder
-    class D,E,F,G,I,J,K files
-    class H,L,M,N data
+```text
+🏦 BankingSystem/
+│
+├── 📁 screenshots/
+│   ├── main_menu.png
+│   ├── deposit.png
+│   └── transaction_history.png
+│
+├── 🐍 banking_system.py
+├── 🗄️ database.py
+├── 📄 README.md
+├── ⚙️ .gitignore
+└── 💾 bank.db
 ```
 
-<p align="center">
-  <b>🏦 BANKING & FINANCE</b> &nbsp; | &nbsp; <b>🔐 ACCOUNT SECURITY</b>
-</p>
+### ⚙️ Component Architecture
 
+| Component | Responsibility |
+|---|---|
+| 🐍 banking_system.py | Banking Operations |
+| 🗄️ database.py | Database Management |
+| 💾 bank.db | Account & Transaction Storage |
+| 📁 screenshots/ | Project Screenshots |
 
