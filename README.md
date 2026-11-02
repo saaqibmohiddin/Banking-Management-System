@@ -63,7 +63,6 @@ Architecture Workflow
 
 🏗️ Project Structure – Architecture Diagram
 
-
 ```mermaid
 %%{init:{'theme':'dark','themeVariables': {'primaryColor':'#172C49','primaryTextColor':'#FFFFFF','primaryBorderColor':'#D6AD55','lineColor':'#D6AD55','secondaryColor':'#101D30','tertiaryColor':'#071426'}}}%%
 flowchart TD
