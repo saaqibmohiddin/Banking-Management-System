@@ -1,5 +1,3 @@
-
-
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,50:172C49,100:D6AD55&height=90&text=BANKING%20SYSTEM&fontSize=28&fontColor=FFFFFF&desc=PROJECT%20ARCHITECTURE&descSize=13&descAlignY=72"/><img src="https://img.shields.io/badge/BANKING%20%26%20FINANCE-172C49?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/ACCOUNT%20SECURITY-D6AD55?style=for-the-badge"/></div>🏦 BankingSystem/
 │
