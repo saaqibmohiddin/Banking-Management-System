@@ -94,3 +94,113 @@ Architecture Workflow
 | 💾 bank.db | Account & Transaction Storage |
 | 📁 screenshots/ | Project Screenshots |
 
+
+---
+
+## 🚀 Installation & Setup
+
+<p align="center">
+  <img src="https://img.shields.io/badge/INSTALLATION-071426?style=for-the-badge&logoColor=D6AD55" />
+  <img src="https://img.shields.io/badge/PYTHON%203-172C49?style=for-the-badge&logo=python&logoColor=FFD43B" />
+  <img src="https://img.shields.io/badge/SQLITE-D6AD55?style=for-the-badge&logo=sqlite&logoColor=071426" />
+</p>
+
+Follow these steps to download, configure, and run the Banking Management System on your computer.
+
+### 1️⃣ Prerequisites
+
+Make sure you have installed:
+
+| Requirement | Version / Tool |
+|---|---|
+| Python | Python 3.10 or later |
+| Database | SQLite |
+| Code Editor | VS Code (recommended) |
+| Version Control | Git |
+
+### 2️⃣ Clone the Repository
+
+Open your terminal and execute:
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Move into the project folder:
+
+```bash
+cd BankingSystem
+```
+
+> Replace `YOUR_GITHUB_REPOSITORY_URL` with your actual GitHub repository URL.
+
+### 3️⃣ Verify Python Installation
+
+Check whether Python is installed:
+
+```bash
+python --version
+```
+
+If your system uses the Python launcher, try:
+
+```bash
+py --version
+```
+
+### 4️⃣ Run the Application
+
+Start the Banking Management System:
+
+```bash
+python banking_system.py
+```
+
+On Windows, you can also use:
+
+```bash
+py banking_system.py
+```
+
+### 5️⃣ Database Setup
+
+This project uses SQLite for storing account and transaction information.
+
+- SQLite does not require a separate database server.
+- The `bank.db` file stores the application data.
+- The database setup is handled by the project's database code.
+
+### 6️⃣ Required Dependencies
+
+The project uses Python's built-in modules:
+
+- `sqlite3`
+- `hashlib`
+- `decimal`
+- `getpass`
+- `pathlib`
+
+No separate package installation is required for these standard-library modules.
+
+### 7️⃣ Start Banking Operations
+
+After successfully running the application, use the main menu to access:
+
+- Create Bank Account
+- Account Authentication
+- Deposit Money
+- Withdraw Money
+- Balance Inquiry
+- Transaction History
+
+---
+
+<p align="center">
+
+**🏦 BANKING & FINANCE**
+
+**🔐 SECURE ACCOUNT MANAGEMENT**
+
+*Simple • Reliable • Secure*
+
+</p>
