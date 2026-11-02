@@ -1,8 +1,7 @@
 🏦 Project Structure
 
-<div align="center"><img src="https://img.shields.io/badge/BANKING_SYSTEM-PROJECT_ARCHITECTURE-071426?style=for-the-badge&labelColor=071426&color=D6AD55"/><img src="https://img.shields.io/badge/DARK_NAVY-071426?style=flat-square"/> <img src="https://img.shields.io/badge/LUXURY_GOLD-D6AD55?style=flat-square"/>
-
-</div>🏦 BankingSystem
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,50:172C49,100:D6AD55&height=90&text=BANKING%20SYSTEM&fontSize=28&fontColor=FFFFFF&fontAlignY=40&desc=PROJECT%20ARCHITECTURE&descSize=13&descAlignY=72"/><img src="https://img.shields.io/badge/DARK%20NAVY-071426?style=for-the-badge&labelColor=071426&color=172C49"/>
+<img src="https://img.shields.io/badge/LUXURY%20GOLD-D6AD55?style=for-the-badge&labelColor=604A19&color=D6AD55"/></div>🏦 BankingSystem/
 │
 ├── 📁 screenshots/
 │
@@ -16,7 +15,7 @@
 │
 └── 💾 bank.db
 
-<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,100:D6AD55&height=55&section=footer&text=SECURE%20BANKING%20%7C%20SMART%20TRANSACTIONS&fontSize=15&fontColor=FFFFFF"/></div>
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:071426,100:D6AD55&height=55&text=SECURE%20BANKING%20%7C%20SMART%20TRANSACTIONS&fontSize=14&fontColor=FFFFFF"/></div>
 
 ---
 
