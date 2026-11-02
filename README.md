@@ -38,21 +38,31 @@ Git & GitHub| Version Control
 
 Python Modules: "sqlite3", "hashlib", "decimal", "getpass", "pathlib"
 
+
 📂 Project Structure
 
-BankingSystem/
+🏦 BankingSystem/
 │
-├── screenshots/
-│   ├── main_menu.png
-│   ├── deposit.png
-│   └── transaction_history.png
+├── 📁 screenshots/
+│   ├── 🖼️ main_menu.png
+│   ├── 🖼️ deposit.png
+│   └── 🖼️ transaction_history.png
 │
-├── banking_system.py
-├── database.py
-├── README.md
-├── .gitignore
-└── bank.db
+├── 🐍 banking_system.py
+├── 🗄️ database.py
+├── 📄 README.md
+├── ⚙️ .gitignore
+└── 💾 bank.db
 
+📁 File Description
+
+File| Purpose
+🐍 "banking_system.py"| Main banking application
+🗄️ "database.py"| Database operations
+📁 "screenshots/"| Application previews
+💾 "bank.db"| SQLite database
+📄 "README.md"| Project documentation
+⚙️ ".gitignore"| Git ignored files
 
 ---
 
