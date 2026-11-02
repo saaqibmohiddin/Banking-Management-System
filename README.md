@@ -204,3 +204,47 @@ After successfully running the application, use the main menu to access:
 *Simple • Reliable • Secure*
 
 </p>
+
+
+---
+
+## 🎯 Project Objective
+
+<p align="center">
+  <img src="https://img.shields.io/badge/PROJECT%20OBJECTIVE-071426?style=for-the-badge&logoColor=D6AD55" />
+  <img src="https://img.shields.io/badge/BANKING%20MANAGEMENT-172C49?style=for-the-badge&logoColor=D6AD55" />
+</p>
+
+### 🏦 Purpose of the Project
+
+The main objective of this Banking Management System is to develop a secure, reliable, and user-friendly banking application using Python and SQLite.
+
+It aims to simplify basic banking operations by allowing users to create accounts, authenticate securely, deposit and withdraw money, check account balances, and view transaction history through a simple menu-driven interface.
+
+### 🎯 Key Objectives
+
+| Objective | Description |
+|---|---|
+| 🏦 Account Management | Create and manage bank accounts |
+| 🔐 Security | Protect account PINs using hashing |
+| 💰 Money Transactions | Perform deposits and withdrawals |
+| 📊 Balance Inquiry | Check available account balance |
+| 📜 Transaction Tracking | Maintain transaction history |
+| 🗄️ Data Management | Store account information using SQLite |
+| ✅ Input Validation | Prevent invalid user inputs |
+| ⚡ Reliability | Handle database errors and transaction failures |
+
+### 💡 Project Vision
+
+To demonstrate how fundamental banking operations can be managed through a simple Python-based application while maintaining account security, accurate transaction records, and reliable database operations.
+
+---
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/SECURE%20BANKING-071426?style=for-the-badge&logoColor=D6AD55" />
+<img src="https://img.shields.io/badge/SMART%20TRANSACTIONS-172C49?style=for-the-badge&logoColor=D6AD55" />
+
+**🏦 Secure Banking • 💰 Reliable Transactions • 🔐 Account Protection**
+
+</p>
