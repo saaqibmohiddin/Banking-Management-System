@@ -73,7 +73,7 @@ Architecture Workflow
 ```text
 🏦 BankingSystem/
 │
-├── 📁 screenshots/
+├──
 │   ├── main_menu.png
 │   ├── deposit.png
 │   └── transaction_history.png
