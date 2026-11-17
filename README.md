@@ -92,7 +92,7 @@ Architecture Workflow
 | 🐍 banking_system.py | Banking Operations |
 | 🗄️ database.py | Database Management |
 | 💾 bank.db | Account & Transaction Storage |
-| 📁 screenshots/ | Project Screenshots |
+
 
 
 ---
